@@ -1,0 +1,48 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+
+  "extends": ["plugin:react/recommended", "airbnb", "plugin:prettier/recommended", "prettier", "plugin:react-hooks/recommended"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier", "react-hooks"],
+  "rules": {
+    "indent": ["error", 2],
+    "prettier/prettier": ["error", { "singleQuote": false, "semi": true, "tabWidth": 2 }],
+    "react/react-in-jsx-scope": "off",
+    "quotes": ["error", "double", { "allowTemplateLiterals": false, "avoidEscape": true }],
+    "func-names": ["error", "as-needed"],
+    "no-var": "error",
+    "no-unused-vars": "warn",
+    "no-unused-expressions": "warn",
+    "no-unused-labels": "warn",
+    "prefer-const": "error",
+    "no-use-before-define": "error",
+    "semi-style": ["off", "last"],
+    "import/newline-after-import": ["off", { "count": 2 }],
+    "no-console": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": [
+      "warn",
+      {
+        "additionalHooks": "(useRecoilCallback|useRecoilTransaction_UNSTABLE)"
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "assert": "either" // either check for `htmlFor` or `nesting`
+      }
+    ],
+    "no-alert": "off",
+    "no-nested-ternary": "off",
+    "react/prop-types": 0
+  }
+}
