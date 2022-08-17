@@ -11,7 +11,11 @@ const Button = styled.button`
   justify-content: center;
   align-items: center;
   color: black;
-  transition: 1s color;
+  transition: 0.5s color;
+  margin-top: 25px;
+  cursor: pointer;
+  font-weight: bold;
+
   :hover {
     background-color: blue;
     color: white;

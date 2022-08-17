@@ -1,10 +1,21 @@
 import { Input, InputFieldWrapper } from "./styles";
 
-export default function InputField({ forText = "someInput" }) {
+export default function InputField({ forText = "someInput", onChange = () => {}, error = "" }) {
   return (
     <InputFieldWrapper>
-      <label htmlFor={forText}>{forText}</label>
-      <Input typeof="text" aria-required id={forText} />
+      <div>
+        <label htmlFor={forText}>{forText}</label>
+      </div>
+
+      <Input
+        onChange={(e) => {
+          onChange(e.target.value);
+        }}
+        typeof="text"
+        aria-required
+        id={forText}
+      />
+      {!!error === true && <p className="error">{error}</p>}
     </InputFieldWrapper>
   );
 }
